@@ -1,0 +1,21 @@
+{
+  "name": "twilio-flex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "mic": "^2.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "websocket": "^1.0.31",
+    "ws": "^7.2.1"
+  }
+}
