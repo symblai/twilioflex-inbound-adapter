@@ -7,8 +7,8 @@ This is a sample implementation of using Twilio Flex as an inbound adapter for s
 First update the .env file with the following:
 1. Your App Id that you can get from [Platform](https://platform.rammer.ai)
 2. Your App Secret that you can get from [Platform](https://platform.rammer.ai)
-3. User Email Address
-4. First and Last name of the user
+3. Your Email Address
+4. Your First and Last name
 
 ## Twilio Flex
 
