@@ -1,18 +1,18 @@
 # Twilio Flex Inbound Adapter
 
-This is a sample implementation of using Twilio Flex as an inbound adapter for streaming audio to through Rammer's Websocket API
+This is a sample implementation of using Twilio Flex as an inbound adapter for streaming audio to through Symbl's Websocket API
 
 ## Update .env
 
 First update the .env file with the following:
-1. Your App Id that you can get from [Platform](https://platform.rammer.ai)
-2. Your App Secret that you can get from [Platform](https://platform.rammer.ai)
+1. Your App Id that you can get from [Platform](https://platform.symbl.ai)
+2. Your App Secret that you can get from [Platform](https://platform.symbl.ai)
 3. Your Email Address
 4. Your First and Last name
 
 ## Twilio Flex
 
-1. Configure your Twilio Flex flow using `Media Streams` - Follow this [blog post](https://rammer.ai/blogs/twilio-flex-integration) for reference
+1. Configure your Twilio Flex flow using `Media Streams` - Follow this [blog post](https://symbl.ai/blogs/twilio-flex-integration) for reference
 
 ## npm
 
@@ -27,6 +27,6 @@ Finally in a new terminal, run `./ngrok http 3000` to create a http tunnel to al
 
 Feel free to fork any of the projects here to use on your own and if you have any code improvements, make a pull request and the request will be reviewed by one of our admins.
 
-For a sample reference implentation using Rammer, take a look at our [Platform](https://platform.rammer.ai).
+For a sample reference implentation using Symbl, take a look at our [Platform](https://platform.symbl.ai).
 
-If you have questions, bugs to report or feature suggestions, join our [Dev Community](https://community.rammer.ai/).
+If you have questions, bugs to report or feature suggestions, join our [Dev Community](https://community.symbl.ai/).
