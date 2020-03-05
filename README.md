@@ -21,7 +21,9 @@ First update the .env file with the following:
 
 ## ngrok
 
-Finally in a new terminal, run `./ngrok http 3000` to create a http tunnel to allow Twilio to hit the websocket server. If you plan to deploy this server, then you don't need to use ngrok and instead just have to configure Twilio Media Streams endpoint to hit the deployed server.
+Use ngrok to expose your local endpoint publically so that Twilio can interact with it. You can install ngrok [here](https://ngrok.com/download)
+
+In a new terminal, run `ngrok http 3000` to create a http tunnel to allow Twilio to hit the websocket server. If you plan to deploy this server, then you don't need to use ngrok and instead just have to configure Twilio Media Streams endpoint to hit the deployed server.
 
 ## References
 
