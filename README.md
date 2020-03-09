@@ -12,7 +12,7 @@ First update the .env file with the following:
 
 ## Twilio Flex
 
-1. Configure your Twilio Flex flow using `Media Streams` - Follow this [blog post](https://symbl.ai/blogs/twilio-flex-integration) for reference
+1. Configure your Twilio Flex flow using `Media Streams` - Follow this [blog post](https://symbl.ai/integrating-symbl-insights-with-twilio-media-streams/) for reference
 
 ## npm
 
