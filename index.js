@@ -118,7 +118,7 @@ auth.then(body => {
     'wss://api.symbl.ai/v1/realtime/insights/1',
     null,
     null,
-    { 'X-API-KEY': JSON.stringify(body.accessToken)}
+    { 'X-API-KEY': body.accessToken}
   );
 });
 
