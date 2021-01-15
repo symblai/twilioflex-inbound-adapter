@@ -18,7 +18,9 @@ Enable Symbl for Twilio Flex Calls
 <hr />
  * [Introduction](#introduction)
  * [Pre-requisites](#pre-requisites)
- * [Setup](#setup)
+ * [Setup and Deploy](#setupanddeploy)
+ * [Function Parameters](#functionparameters)
+ * [Dependencies](#dependencies)
  * [References](#references)
  * [Conclusion](#conclusion)
  * [Community](#community)
@@ -35,12 +37,14 @@ This is a sample implementation of Symbl's Websocket API using Twilio Flex as an
 * ngrok - free accounts at https://ngrok.com/ (or a deployed server)
 * Twilio account w/ Flex and Studio features included - https://www.twilio.com/try-twilio
 
-## Setup 
+## Setup and Deploy
 The first step to getting setup is to [sign up][signup]. 
 
 Update the .env file with the following:
 1. Your App Id that you can get from [Platform](https://platform.symbl.ai)
 2. Your App Secret that you can get from [Platform](https://platform.symbl.ai)
+3. Your email address where the conversation summary and insights will be sent.
+4. Your name to be attached to conversation summary 
 
 In a new terminal, run `ngrok http 3000` to create a http tunnel to allow Twilio to hit the websocket server. If you plan to deploy this server, then you don't need to use ngrok and instead just have to configure Twilio Media Streams endpoint to hit the deployed server.
 
@@ -50,12 +54,53 @@ Run the follwing npm commands:
 1. `npm install` to download all the node modules
 2. `node index.js` to start the websocket server
 
+## Function Parameters 
+
+Function params passed to the Symbl [Streaming API](https://docs.symbl.ai/docs/streamingapi/overview/introduction) to open the websocket connection can be found beginning on line 71 of the index.js file.  
+
+```javascript
+client_connection.send(JSON.stringify({
+    "type": "start_request",
+    "insightTypes": ["question", "action_item"],
+    "config": {
+      "confidenceThreshold": 0.5,
+      "timezoneOffset": 480, // Your timezone offset from UTC in minutes
+      "languageCode": "en-US",
+      "speechRecognition": {
+        "encoding": "MULAW", // Codec required for Twilio Flex
+        "sampleRateHertz": 8000 // Make sure the correct sample rate is
+      },
+      "meetingTitle": "Customer Call"
+    },
+    "speaker": {
+      "userId": process.env.USER_EMAIL,
+      "name": process.env.USER_NAME
+    },
+}));
+```
+
+## Dependencies
+
+```json
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "mic": "^2.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "websocket": "^1.0.31",
+    "ws": "^7.2.1"
+  }
+```
+
 ## References
 Configured Twilio Studio flow
 
 ![pic](/Capture.PNG)
 
 ## Conclusion
+When implemented once a Twilio Flex agents answers a new call, the call will connect with Symbl and the the conversation + insights will be generated and sent via email when the call is closed. 
 
 ## Community
 

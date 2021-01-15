@@ -82,8 +82,8 @@ ws.on('connection', (conn) => {
       "meetingTitle": "Customer Call"
     },
     "speaker": {
-      "userId": "jon@symbl.ai",
-      "name": "Jon"
+      "userId": process.env.USER_EMAIL,
+      "name": process.env.USER_NAME
     },
   }));
 });
