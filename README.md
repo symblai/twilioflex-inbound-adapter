@@ -1,7 +1,7 @@
 # Twilio Flex Inbound Adapter
 
 ============================
-
+[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
 <hr />
     <img src="https://developer.symbl.ai/assets/images/Symbl.svg" height="48px" alt="Symbl is Conversational AI />
 <hr /> 
@@ -16,12 +16,8 @@ Symbl's APIs empower developers to enable:
 <hr />
 Enable Symbl for Twilio Flex Calls
 <hr />
- * [Introduction](#introduction)
- * [Pre-requisites](#pre-requisites)
- * [Setup and Deploy](#setupanddeploy)
- * [Function Parameters](#functionparameters)
- * [Dependencies](#dependencies)
- * [References](#references)
+ * [Setup](#setup)
+ * [Integration](#integration)
  * [Conclusion](#conclusion)
  * [Community](#community)
 
@@ -29,15 +25,8 @@ Enable Symbl for Twilio Flex Calls
 
 This is a sample implementation of Symbl's Websocket API using Twilio Flex as an inbound adapter for streaming audio.  These instructions use Twilio Media Streams configured in the Twilio Studio and ngrok to expose a local endpoint.  
 
-## Pre-requisites
+## Setup
 
-* JS ES6+
-* Node.js
-* npm (or your favorite package manager)
-* ngrok - free accounts at https://ngrok.com/ (or a deployed server)
-* Twilio account w/ Flex and Studio features included - https://www.twilio.com/try-twilio
-
-## Setup and Deploy
 The first step to getting setup is to [sign up][signup]. 
 
 Update the .env file with the following:
@@ -54,7 +43,17 @@ Run the follwing npm commands:
 1. `npm install` to download all the node modules
 2. `node index.js` to start the websocket server
 
-## Function Parameters 
+## Integration
+
+### Pre-requisites
+
+* JS ES6+
+* Node.js
+* npm (or your favorite package manager)
+* ngrok - free accounts at https://ngrok.com/ (or a deployed server)
+* Twilio account w/ Flex and Studio features included - https://www.twilio.com/try-twilio
+
+### Function Parameters 
 
 Function params passed to the Symbl [Streaming API](https://docs.symbl.ai/docs/streamingapi/overview/introduction) to open the websocket connection can be found beginning on line 71 of the index.js file.  
 
@@ -79,7 +78,7 @@ client_connection.send(JSON.stringify({
 }));
 ```
 
-## Dependencies
+### Dependencies
 
 ```json
   "dependencies": {
@@ -94,7 +93,7 @@ client_connection.send(JSON.stringify({
   }
 ```
 
-## References
+### References
 Configured Twilio Studio flow
 
 ![pic](/Capture.PNG)
@@ -104,10 +103,17 @@ When implemented once a Twilio Flex agents answers a new call, the call will con
 
 ## Community
 
-If you liked our integration guide, please star our repo! If you have any questions, feel free to reach out to us at devrelations@symbl.ai or through our Community Slack at https://developer.symbl.ai/community/slack or our [developer community][developer_community]. 
+If you have any questions, feel free to reach out to us at devrelations@symbl.ai or thorugh our Community Slack at https://developer.symbl.ai/community/slack [developer community][developer_community]
+
+This guide is actively developed, and we love to hear from you! Please feel free to [create an issue][issues] or [open a pull request][pulls] with your questions, comments, suggestions and feedback.  If you liked our integration guide, please star our repo!
+
 This library is released under the [MIT License][license]
+
 [license]: LICENSE.txt
+[telephony]: https://docs.symbl.ai/docs/telephony/overview/post-api
 [websocket]: https://docs.symbl.ai/docs/streamingapi/overview/introduction
 [developer_community]: https://community.symbl.ai/?_ga=2.134156042.526040298.1609788827-1505817196.1609788827
 [signup]: https://platform.symbl.ai/?_ga=2.63499307.526040298.1609788827-1505817196.1609788827
+[issues]: https://github.com/symblai/symbl-for-zoom/issues
+[pulls]: https://github.com/symblai/symbl-for-zoom/pulls
 
