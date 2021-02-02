@@ -1,21 +1,20 @@
 # Twilio Flex Inbound Adapter
 
-============================
-[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
-<hr />
-    <img src="https://developer.symbl.ai/assets/images/Symbl.svg" height="48px" alt="Symbl is Conversational AI />
-<hr /> 
 
-============================
+[![Websocket](https://img.shields.io/badge/symbl-websocket-brightgreen)](https://docs.symbl.ai/docs/streamingapi/overview/introduction)
 
 Symbl's APIs empower developers to enable: 
-- **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions.\
+- **Real-time** analysis of free-flowing discussions to automatically surface highly relevant summary discussion topics, contextual insights, suggestive action items, follow-ups, decisions, and questions.
 - **Voice APIs** that makes it easy to add AI-powered conversational intelligence to either [telephony][telephony] or [WebSocket][websocket] interfaces.
 - **Conversation APIs** that provide a REST interface for managing and processing your conversation data.
 - **Summary UI** with a fully customizable and editable reference experience that indexes a searchable transcript and shows generated actionable insights, topics, timecodes, and speaker information.
+
 <hr />
-Enable Symbl for Twilio Flex Calls
+
+## Enable Symbl for Twilio Flex Calls
+
 <hr />
+
  * [Setup](#setup)
  * [Integration](#integration)
  * [Conclusion](#conclusion)
@@ -96,7 +95,7 @@ client_connection.send(JSON.stringify({
 ### References
 Configured Twilio Studio flow
 
-![pic](/Capture.PNG)
+<img src="./Capture.PNG" height="50%" width="50%">
 
 ## Conclusion
 When implemented once a Twilio Flex agents answers a new call, the call will connect with Symbl and the the conversation + insights will be generated and sent via email when the call is closed. 
