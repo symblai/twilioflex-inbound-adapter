@@ -102,7 +102,7 @@ When implemented once a Twilio Flex agents answers a new call, the call will con
 
 ## Community
 
-If you have any questions, feel free to reach out to us at devrelations@symbl.ai or thorugh our Community Slack at https://developer.symbl.ai/community/slack [developer community][developer_community]
+If you have any questions, feel free to reach out to us at devrelations@symbl.ai, through our Community [Slack][slack], or [developer community][developer_community]
 
 This guide is actively developed, and we love to hear from you! Please feel free to [create an issue][issues] or [open a pull request][pulls] with your questions, comments, suggestions and feedback.  If you liked our integration guide, please star our repo!
 
@@ -115,4 +115,5 @@ This library is released under the [MIT License][license]
 [signup]: https://platform.symbl.ai/?_ga=2.63499307.526040298.1609788827-1505817196.1609788827
 [issues]: https://github.com/symblai/symbl-for-zoom/issues
 [pulls]: https://github.com/symblai/symbl-for-zoom/pulls
+[slack]: https://join.slack.com/t/symbldotai/shared_invite/zt-4sic2s11-D3x496pll8UHSJ89cm78CA
 
