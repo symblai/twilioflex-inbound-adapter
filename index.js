@@ -82,8 +82,8 @@ ws.on('connection', (conn) => {
       "meetingTitle": "Customer Call"
     },
     "speaker": {
-      "userId": "jon@symbl.ai",
-      "name": "Jon"
+      "userId": process.env.USER_EMAIL,
+      "name": process.env.USER_NAME
     },
   }));
 });
@@ -118,7 +118,7 @@ auth.then(body => {
     'wss://api.symbl.ai/v1/realtime/insights/1',
     null,
     null,
-    { 'X-API-KEY': JSON.stringify(body.accessToken)}
+    { 'X-API-KEY': body.accessToken}
   );
 });
 
